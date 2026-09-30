@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Productos | Administrador</title>
+
+    <link
+        rel="stylesheet"
+        href="/src/css/admin.css"
+    >
+
+</head>
+
+<body>
+
+    <header class="admin-header">
+
+        <h1>Administrar productos</h1>
+
+        <a href="/admin/index.html">
+            Volver al panel
+        </a>
+
+    </header>
+
+
+    <main class="admin-productos">
+
+        <section>
+
+            <h2>Agregar producto</h2>
+
+            <form id="formProducto">
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="categoria"
+                    placeholder="Categoría"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="descripcion"
+                    placeholder="Descripción"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="precio"
+                    placeholder="Precio"
+                    step="0.01"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="stock"
+                    placeholder="Stock"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="marca"
+                    placeholder="Marca"
+                    required
+                >
+
+                <input
+                    type="url"
+                    id="imagen"
+                    placeholder="URL de imagen"
+                    required
+                >
+
+                <button type="submit">
+                    Guardar producto
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section>
+
+            <h2>Productos registrados</h2>
+
+            <div id="tablaProductos"></div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="/src/js/admin/productos.js"
+    ></script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Administrador | Bodega Velásquez</title>
+
+    <link 
+        rel="stylesheet" 
+        href="/src/css/admin.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="login">
+
+        <h1>Bodega Velásquez</h1>
+
+        <h2>Panel administrativo</h2>
+
+        <form id="formLogin">
+
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Usuario"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+                required
+            >
+
+            <button type="submit">
+                Ingresar
+            </button>
+
+        </form>
+
+        <p id="mensaje"></p>
+
+    </main>
+
+
+    <script 
+        type="module"
+        src="/src/js/admin/login.js"
+    ></script>
+
+</body>
+
+</html>

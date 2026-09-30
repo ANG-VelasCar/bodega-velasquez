@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bodega Velásquez</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      Bodega Velásquez
+    </div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+      <button id="btnCarrito">
+        🛒 Carrito (<span id="cantidadCarrito">0</span>)
+      </button>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+
+      <div class="hero-contenido">
+
+        <h1>Bodega Velásquez</h1>
+
+        <p>
+          Todo lo que necesitas para tu hogar
+          en un solo lugar.
+        </p>
+
+        <a href="#productos" class="btn">
+          Ver productos
+        </a>
+
+        <a href="/admin/login.html" class="btn btn-admin">
+          Gestionar productos
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+    <section class="categorias">
+
+      <h2>Categorías</h2>
+
+      <div class="categorias-container">
+
+        <button class="categoria-btn" data-categoria="Todos">
+          Todos
+        </button>
+
+        <button class="categoria-btn" data-categoria="Bebidas">
+          🥤 Bebidas
+        </button>
+
+        <button class="categoria-btn" data-categoria="Cervezas">
+          🍺 Cervezas
+        </button>
+
+        <button class="categoria-btn" data-categoria="Abarrotes">
+          🍚 Abarrotes
+        </button>
+
+        <button class="categoria-btn" data-categoria="Snacks">
+          🍪 Snacks
+        </button>
+
+        <button class="categoria-btn" data-categoria="Limpieza">
+          🧹 Limpieza
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="productos">
+
+      <h2>Nuestros productos</h2>
+
+      <div id="contenedorProductos" class="productos-container">
+
+        <p>Cargando productos...</p>
+
+      </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+
+      <h2>Sobre nosotros</h2>
+
+      <p>
+        Bodega Velásquez es un negocio dedicado a la venta
+        de productos de primera necesidad, bebidas,
+        snacks, abarrotes y otros productos para el hogar.
+      </p>
+
+      <p>
+        Nuestro objetivo es ofrecer productos de calidad
+        y una atención cercana a nuestros clientes.
+      </p>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+
+      <h2>Contáctanos</h2>
+
+      <p>📍 Sapallanga - Huancayo</p>
+
+      <p>📱 WhatsApp: 973 799 480</p>
+
+      <p>🕐 Atención: Lunes a Domingo</p>
+
+    </section>
+
+  </main>
+
+
+  <!-- CARRITO -->
+  <div id="modalCarrito" class="modal">
+
+    <div class="carrito">
+
+      <button id="cerrarCarrito" class="cerrar">
+        ✖
+      </button>
+
+      <h2>🛒 Mi carrito</h2>
+
+      <div id="listaCarrito"></div>
+
+      <div class="total">
+        Total: S/ <span id="totalCarrito">0.00</span>
+      </div>
+
+      <button id="btnWhatsApp" class="btn-whatsapp">
+        Realizar pedido por WhatsApp
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+
+    <p>
+      © 2026 Bodega Velásquez - Todos los derechos reservados
+    </p>
+
+  </footer>
+
+
+  <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>

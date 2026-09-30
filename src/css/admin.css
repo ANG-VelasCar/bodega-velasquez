@@ -1,0 +1,252 @@
+:root {
+    --verde-900: #14532d;
+    --verde-800: #166534;
+    --verde-100: #ecfdf5;
+    --blanco: #ffffff;
+    --gris-50: #f6f7f8;
+    --gris-100: #eef2f4;
+    --gris-200: #dfe5e8;
+    --gris-400: #94a3b8;
+    --gris-700: #334155;
+    --gris-900: #0f172a;
+    --mango: #fbbf24;
+    --rojo: #dc2626;
+    --sombra: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--gris-50);
+    color: var(--gris-900);
+}
+
+button,
+input,
+a {
+    font: inherit;
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 2rem;
+    background: var(--verde-900);
+    color: var(--blanco);
+    box-shadow: 0 10px 24px rgba(20, 83, 45, 0.16);
+}
+
+.admin-header h1 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.admin-header a,
+.admin-header button,
+#btnCerrarSesion {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--blanco);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.login {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #ecfdf5 0%, #dbeafe 100%);
+    padding: 1.5rem;
+}
+
+.login h1,
+.login h2 {
+    text-align: center;
+}
+
+.login h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--verde-900);
+}
+
+#formLogin {
+    width: min(100%, 420px);
+    background: var(--blanco);
+    border: 1px solid var(--gris-200);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#formLogin input,
+#formProducto input {
+    width: 100%;
+    border: 1px solid var(--gris-200);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    background: var(--gris-50);
+}
+
+#formLogin button,
+#formProducto button,
+.btn-editar,
+.btn-eliminar-admin {
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#formLogin button,
+#formProducto button {
+    background: var(--verde-800);
+    color: var(--blanco);
+}
+
+#mensaje {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--rojo);
+    font-weight: 600;
+}
+
+.dashboard,
+.admin-productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.2rem 3rem;
+}
+
+.dashboard h2,
+.admin-productos h2 {
+    margin-bottom: 1.4rem;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.admin-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+.admin-menu a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: var(--blanco);
+    border: 1px solid var(--gris-200);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: var(--sombra);
+    color: var(--gris-900);
+    text-decoration: none;
+}
+
+.admin-menu a h3 {
+    font-size: 1.4rem;
+}
+
+.admin-menu a p {
+    color: var(--gris-700);
+}
+
+.admin-productos {
+    display: grid;
+    grid-template-columns: minmax(280px, 420px) 1fr;
+    gap: 1.6rem;
+}
+
+.admin-productos section {
+    background: var(--blanco);
+    border: 1px solid var(--gris-200);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: var(--sombra);
+}
+
+#formProducto {
+    display: grid;
+    gap: 0.9rem;
+}
+
+#tablaProductos {
+    display: grid;
+    gap: 1rem;
+}
+
+.admin-producto {
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    background: var(--gris-50);
+    border: 1px solid var(--gris-200);
+    border-radius: 14px;
+    padding: 0.8rem;
+}
+
+.admin-producto img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.admin-producto h3 {
+    margin-bottom: 0.25rem;
+}
+
+.admin-producto p {
+    color: var(--gris-700);
+    font-size: 0.9rem;
+}
+
+.admin-producto .acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.btn-editar {
+    background: var(--mango);
+    color: var(--gris-900);
+}
+
+.btn-eliminar {
+    background: #fee2e2;
+    color: #b91c1c;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .admin-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-producto {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
