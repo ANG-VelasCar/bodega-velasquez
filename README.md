@@ -45,6 +45,10 @@ Además, incluye una sección administrativa para realizar operaciones CRUD sobr
 - [admin/productos.html](admin/productos.html): formulario y CRUD de productos
 - [src/js/admin/login.js](src/js/admin/login.js): validación del login
 - [src/js/admin/productos.js](src/js/admin/productos.js): gestión de productos en admin
+- [vite.config.js](vite.config.js): configuración de Vite para desarrollo/preview
+- [Dockerfile](Dockerfile): configuración para contenedor Docker
+- [nginx.conf](nginx.conf): configuración de NGINX para producción
+- [backend](backend): ejemplo de estructura futura en .NET, no reemplaza el proyecto principal
 
 ## Tecnologías usadas
 
@@ -52,12 +56,15 @@ Además, incluye una sección administrativa para realizar operaciones CRUD sobr
 - CSS3
 - JavaScript ES Modules
 - Vite
+- Docker
+- .NET/C# como referencia futura
 - MockAPI para almacenamiento de productos
 
 ## Requisitos
 
 - Node.js instalado
 - npm o pnpm
+- Docker opcional para contenedorización
 
 ## Instalación y ejecución
 
@@ -69,6 +76,10 @@ Además, incluye una sección administrativa para realizar operaciones CRUD sobr
 
 3. Para compilar la versión de producción:
    npm run build
+
+4. Si quieres probar el contenedor:
+   docker build -t bodega-velasquez .
+   docker run -p 8080:80 bodega-velasquez
 
 ## Datos de acceso administrativo
 

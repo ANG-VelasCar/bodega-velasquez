@@ -40,7 +40,3 @@ export async function cargarProductos() {
     renderProductos(productos);
     return productos;
 }
-
-if (contenedor) {
-    cargarProductos();
-}
